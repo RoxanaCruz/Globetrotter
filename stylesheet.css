@@ -1,0 +1,208 @@
+
+  /* Ensure proper sizing */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    color: black;
+    background-color: dodgerblue;
+
+}
+
+.header {
+    padding: 50px; /* some padding */
+    text-align: center; /* center the text */
+    color:white (1, 12, 22); /* white text color */
+    font-family: Copperplate, Papyrus, fantasy;
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/palmTrees.jpg");
+
+  /* Set a specific height */
+    height: 50%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
+
+  .home-img {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+
+  }
+  
+  /* Increase the font size of the <h1> element */
+  .header h1 {
+    font-size:50px;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+
+  .normheader {
+    text-align: center;
+    font-size:20px;
+    font-family: Copperplate, Papyrus, fantasy;
+    color: black;
+  }
+
+  /* Navbar */
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: lightgrey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background: lightblue; 
+    color: black
+;
+  }
+  
+
+  /* Column container */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    background: lightblue;
+    font-family: Copperplate, Papyrus, fantasy; 
+  }
+
+
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 30%; /* Set the width of the sidebar */
+    padding: 20px; /* Some padding */
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Main column */
+  .main {
+    flex: 70%; /* Set the width of the main content */
+    background-color: lightgrey; /* White background color */
+    padding: 20px; /* Some padding */
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+
+  .galleryText {
+    flex: 70%; /* Set the width of the main content */
+    background-color: dodgerblue; /* White background color */
+    padding: 20px; /* Some padding */
+    font-family: Copperplate, Papyrus, fantasy;
+    text-align: center;
+  }
+
+  .attraction-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow attractions to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+.attraction {
+    width: 300px; /* Set width for each attraction */
+    margin: 20px; /* Add spacing between attractions */
+    padding: 20px; /* Add internal spacing */
+    border: 10px solid lightblue; /* Add border for each attraction */
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+
+}
+.attraction img {
+    max-width: 100%; /* Ensure images don't exceed the width of their containers */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.guide-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow attractions to wrap to the next line */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+.guide {
+  width: 300px; /* Set width for each attraction */
+  margin: 20px; /* Add spacing between attractions */
+  padding: 20px; /* Add internal spacing */
+  border: 10px solid lightblue; /* Add border for each attraction */
+  text-align: center;
+  font-family: Copperplate, Papyrus, fantasy;
+
+}
+.guide img {
+  max-width: 100%; /* Ensure images don't exceed the width of their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.img-scroll-container {
+    display: flex;
+    background-color: lightblue;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 15px;
+  }
+  
+  .img-scroll-container img {
+    padding: 5px;
+    color: lightblue;
+    background: white;
+  }
+
+
+/* Media Queries */
+
+   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+
+}
+
